@@ -25,13 +25,6 @@ public class SpecialIceBlock extends Block
         }
     }
 
-    // 让天光向下传播
-    @Override
-    public boolean propagatesSkylightDown(@Nonnull BlockState state, @Nonnull BlockGetter level, @Nonnull BlockPos pos)
-    {
-        return true;
-    }
-
     // 不阻挡方块光
     @Override
     public int getLightBlock(@Nonnull BlockState state, @Nonnull BlockGetter level, @Nonnull BlockPos pos)

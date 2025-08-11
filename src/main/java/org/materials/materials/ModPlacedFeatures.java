@@ -3,7 +3,7 @@ package org.materials.materials;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures 
 {
-    public static void bootstrap(BootstapContext<PlacedFeature> context) 
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) 
     {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -30,7 +30,7 @@ public class ModPlacedFeatures
                        BiomeFilter.biome())); // 生物群系过滤器
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, 
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, 
                                Holder<ConfiguredFeature<?, ?>> configuration,
                                List<PlacementModifier> modifiers) 
     {
