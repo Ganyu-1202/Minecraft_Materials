@@ -1,6 +1,7 @@
 {
     "creative_tab.materials.example_tab": "マテリアルズ",
     "More_information": "Altキーを押し続けて詳細情報を表示",
+    "No_information": "[追加情報はありません。]",
     "item.materials.physique_strengthening_beverage": "体力強化飲料",
     "item.materials.physique_strengthening_beverage.tooltip": "一時的に体力を強化する飲み物。\nただし、副作用はあるのだろうか？",
     "item.materials.example_item": "サンプルアイテム（試してみますか？）",
@@ -55,6 +56,8 @@
     "block.materials.reinforced_mud_bricks": "強化された泥レンガ",
     "block.materials.dissolved_stone": "溶かされた石",
     "block.materials.dissolved_stone.tooltip": "カルスト地形の石は、長い間流水の浸食を受けて脆弱になっている。",
+    "block.materials.rock_sugar": "氷砂糖",
+    "block.materials.reinforced_rock_sugar": "強化された氷砂糖",
     "block.materials.imitation_bedrock": "模造された基岩",
     "block.materials.imitation_bedrock.tooltip": "基岩の硬度ゆえに、模倣しようとする者が常にいる。\n「待って、この模造のベースロックの爆発耐性が弱すぎるよ……」\n「爆発に対する耐性は我々の考慮範囲内にはない。」"
 }

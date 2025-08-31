@@ -1,6 +1,7 @@
 {
     "creative_tab.materials.example_tab": "材料",
     "More_information": "按住 Alt 鍵以獲取更多信息",
+    "No_information": "[沒有可用的附加信息。]",
     "item.materials.physique_strengthening_beverage": "體質強化飲料",
     "item.materials.physique_strengthening_beverage.tooltip": "一種可以暫時增強體質的飲料。\n不過，會有副作用嗎？",
     "item.materials.example_item": "範例物品（試試看？）",
@@ -55,6 +56,8 @@
     "block.materials.reinforced_mud_bricks": "強化泥磚",
     "block.materials.dissolved_stone": "溶蝕石頭",
     "block.materials.dissolved_stone.tooltip": "來自喀斯特地貌的石頭，因長時間受到流水侵蝕而變得脆弱不堪。",
+    "block.materials.rock_sugar": "冰糖",
+    "block.materials.reinforced_rock_sugar": "強化冰糖",
     "block.materials.imitation_bedrock": "仿製基岩",
     "block.materials.imitation_bedrock.tooltip": "總有一些人想要仿製基岩，因為它的硬度。\n「等等，這仿製基岩的爆炸抗性也太弱了……」\n「爆炸抗性並不在我們的考慮範圍之內。」"
 }

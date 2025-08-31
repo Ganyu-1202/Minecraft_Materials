@@ -1,7 +1,5 @@
 package org.materials.materials;
 
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,7 +19,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 import java.util.Objects;
 
 import static org.materials.materials.Materials.*;
@@ -33,28 +30,16 @@ public class EnrollItems
 
     // 注册名为 体质强化饮料 的物品
     public static final DeferredItem<Item> PHYSIQUE_STRENGTHENING_BEVERAGE_ITEM = ITEMS.register("physique_strengthening_beverage", () ->
-            new Item(new Item.Properties()
+            new TipsItem(new Item.Properties()
                     .stacksTo(16)
                     .food(new FoodProperties.Builder()
                             .nutrition(2)  // 提供2饥饿值 (2个营养点)
                             .saturationModifier(0.33f)  // 饱和度修正值 (1.21.1中方法名变更)
                             .alwaysEdible()  // 即使饱食时也能使用 (1.21.1中方法名变更)
-                            .build())
+                            .build()),
+                    "item.materials.physique_strengthening_beverage"
             )
             {
-                @Override
-                public void appendHoverText(@Nonnull ItemStack stack, @Nonnull Item.TooltipContext context, @Nonnull List<Component> tooltip, @Nonnull TooltipFlag flag)
-                {
-                    if (Screen.hasAltDown())
-                    {
-                        tooltip.add(Component.translatable("item.materials.physique_strengthening_beverage.tooltip").withStyle(ChatFormatting.GRAY));
-                    }
-                    else
-                    {
-                        tooltip.add(Component.translatable("More_information").withStyle(ChatFormatting.YELLOW));
-                    }
-                }
-
                 @Override
                 public @Nonnull ItemStack finishUsingItem(@Nonnull ItemStack stack, @Nonnull Level level, @Nonnull LivingEntity entity)
                 {
@@ -191,6 +176,8 @@ public class EnrollItems
                         output.accept(EnrollBlocks.COMPRESSED_PACKED_MUD_BLOCK_ITEM.get());
                         output.accept(EnrollBlocks.REINFORCED_MUD_BRICKS_BLOCK_ITEM.get());
                         output.accept(EnrollBlocks.DISSOLVED_STONE_BLOCK_ITEM.get());
+                        output.accept(EnrollBlocks.ROCK_SUGAR_BLOCK_ITEM.get());
+                        output.accept(EnrollBlocks.REINFORCED_ROCK_SUGAR_BLOCK_ITEM.get());
                         output.accept(EnrollBlocks.IMITATION_BEDROCK_BLOCK_ITEM.get());
                         // 条件性添加萤火虫灌木
                         if (EnrollBlocks.FIREFLY_BUSH_ITEM != null)

@@ -551,6 +551,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('W', Items.WATER_BUCKET)
                 .unlockedBy(getHasName(Items.STONE), has(Items.STONE))
                 .save(output, Materials.MODID + ":dissolved_stone_block_from_stone");
+        // 滴水石可以分解为滴水石锥 (补充Minecraft原版没有的配方)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.POINTED_DRIPSTONE, 4)
+                .requires(Items.DRIPSTONE_BLOCK, 1)
+                .unlockedBy(getHasName(Items.DRIPSTONE_BLOCK), has(Items.DRIPSTONE_BLOCK))
+                .save(output, Materials.MODID + ":dripstone_to_pointed_dripstone");
+
+        // 冰糖 - 用糖制作
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EnrollBlocks.ROCK_SUGAR_BLOCK.get(), 1)
+                .requires(Items.SUGAR, 9)
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
+                .save(output, Materials.MODID + ":rock_sugar_block_from_sugar");
+        // 冰糖可以分解成糖
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.SUGAR, 9)
+                .requires(EnrollBlocks.ROCK_SUGAR_BLOCK.get())
+                .unlockedBy(getHasName(EnrollBlocks.ROCK_SUGAR_BLOCK.get()), has(EnrollBlocks.ROCK_SUGAR_BLOCK.get()))
+                .save(output, Materials.MODID + ":rock_sugar_block_to_sugar");
+        // 强化冰糖 - 用冰糖和铁锭制作
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EnrollBlocks.REINFORCED_ROCK_SUGAR_BLOCK.get(), 1)
+                .pattern("SSS")
+                .pattern("SIS")
+                .pattern("SSS")
+                .define('S', EnrollBlocks.ROCK_SUGAR_BLOCK.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(EnrollBlocks.ROCK_SUGAR_BLOCK.get()), has(EnrollBlocks.ROCK_SUGAR_BLOCK.get()))
+                .save(output, Materials.MODID + ":reinforced_rock_sugar_block");
 
         // 仿制基岩 - 用合成黑曜石和下界合金块制作
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EnrollBlocks.IMITATION_BEDROCK_BLOCK_ITEM.get(), 1)

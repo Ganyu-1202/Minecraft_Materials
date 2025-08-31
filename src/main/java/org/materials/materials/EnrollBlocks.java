@@ -95,7 +95,7 @@ public class EnrollBlocks
     );
     // 注册名为 无边框玻璃 的方块，采用玻璃颜色的默认属性
     public static final DeferredBlock<Block> BORDERLESS_GLASS_BLOCK = BLOCKS.register("borderless_glass", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new SemitransparentBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.NONE)
                     .strength(1.125f, 100.0f)
                     .requiresCorrectToolForDrops() // 需要正确的工具才能掉落物品
@@ -105,23 +105,10 @@ public class EnrollBlocks
                     .isSuffocating((state, level, pos) -> false)
                     .isViewBlocking((state, level, pos) -> false)
             )
-            {
-                @Override
-                public int getLightBlock(@Nonnull net.minecraft.world.level.block.state.BlockState state, @Nonnull net.minecraft.world.level.BlockGetter level, @Nonnull net.minecraft.core.BlockPos pos)
-                {
-                    return 0;
-                }
-
-                @Override
-                public float getShadeBrightness(@Nonnull net.minecraft.world.level.block.state.BlockState state, @Nonnull net.minecraft.world.level.BlockGetter level, @Nonnull net.minecraft.core.BlockPos pos)
-                {
-                    return 1.0F;
-                }
-            }
     );
     // 注册名为 高强度玻璃 的方块，采用玻璃颜色的默认属性
     public static final DeferredBlock<Block> HIGH_STRENGTH_GLASS_BLOCK = BLOCKS.register("high_strength_glass", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new SemitransparentBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.NONE)
                     .strength(12.0f, 1000.0f)
                     .requiresCorrectToolForDrops() // 需要正确的工具才能掉落物品
@@ -131,19 +118,6 @@ public class EnrollBlocks
                     .isSuffocating((state, level, pos) -> false)
                     .isViewBlocking((state, level, pos) -> false)
             )
-            {
-                @Override
-                public int getLightBlock(@Nonnull net.minecraft.world.level.block.state.BlockState state, @Nonnull net.minecraft.world.level.BlockGetter level, @Nonnull net.minecraft.core.BlockPos pos)
-                {
-                    return 0;
-                }
-
-                @Override
-                public float getShadeBrightness(@Nonnull net.minecraft.world.level.block.state.BlockState state, @Nonnull net.minecraft.world.level.BlockGetter level, @Nonnull net.minecraft.core.BlockPos pos)
-                {
-                    return 1.0F;
-                }
-            }
     );
     // 注册名为 “六相冰” 的方块，采用冰颜色的默认属性
     public static final DeferredBlock<SpecialIceBlock> SIX_PHASE_ICE_BLOCK = BLOCKS.register("six_phase_ice", () ->
@@ -518,6 +492,25 @@ public class EnrollBlocks
                 }
             }
     );
+    // 注册名为 冰糖 的方块，采用白色颜色的默认属性
+    public static final DeferredBlock<Block> ROCK_SUGAR_BLOCK = BLOCKS.register("rock_sugar", () ->
+            new SemitransparentBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW) // 设置方块的颜色为白色
+                    .strength(0.5f, 1.0f) // 设置方块的硬度和爆炸抗性
+                    .sound(SoundType.SNOW) // 设置方块破坏时的音效
+                    .lightLevel((state) -> 0) // 设置方块的光照等级
+            )
+    );
+    // 注册名为 强化冰糖 的方块，采用白色颜色的默认属性
+    public static final DeferredBlock<Block> REINFORCED_ROCK_SUGAR_BLOCK = BLOCKS.register("reinforced_rock_sugar", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW) // 设置方块的颜色为白色
+                    .strength(4.0f, 12.0f) // 设置方块的硬度和爆炸抗性
+                    .requiresCorrectToolForDrops() // 需要正确的工具才能掉落物品
+                    .sound(SoundType.SNOW) // 设置方块破坏时的音效
+                    .lightLevel((state) -> 0) // 设置方块的光照等级
+            )
+    );
     // 注册名为 仿制基岩 的方块，采用石头颜色的默认属性
     public static final DeferredBlock<Block> IMITATION_BEDROCK_BLOCK = BLOCKS.register("imitation_bedrock", () ->
             new Block(BlockBehaviour.Properties.of()
@@ -674,6 +667,12 @@ public class EnrollBlocks
     public static final DeferredItem<Item> DISSOLVED_STONE_BLOCK_ITEM = ITEMS.register("dissolved_stone", () ->
             new TipsBlockItem(DISSOLVED_STONE_BLOCK.get(), new Item.Properties(), "block.materials.dissolved_stone.tooltip")
     );
+    public static final DeferredItem<Item> ROCK_SUGAR_BLOCK_ITEM = ITEMS.register("rock_sugar", () ->
+            new BlockItem(ROCK_SUGAR_BLOCK.get(), new Item.Properties())
+    );
+    public static final DeferredItem<Item> REINFORCED_ROCK_SUGAR_BLOCK_ITEM = ITEMS.register("reinforced_rock_sugar", () ->
+            new BlockItem(REINFORCED_ROCK_SUGAR_BLOCK.get(), new Item.Properties())
+    );
     public static final DeferredItem<Item> IMITATION_BEDROCK_BLOCK_ITEM = ITEMS.register("imitation_bedrock", () ->
             new TipsBlockItem(IMITATION_BEDROCK_BLOCK.get(), new Item.Properties(), "block.materials.imitation_bedrock.tooltip")
     );
@@ -733,6 +732,9 @@ public class EnrollBlocks
         LOGGER.info("REINFORCED_ANDESITE_BLOCK in mineable/pickaxe: {}", REINFORCED_ANDESITE_BLOCK.get().defaultBlockState().is(BlockTags.MINEABLE_WITH_PICKAXE));
         LOGGER.info("REINFORCED_ANDESITE_BLOCK in needs_golden_tool: {}", REINFORCED_ANDESITE_BLOCK.get().defaultBlockState().is(NEEDS_GOLDEN_TOOL));
         LOGGER.info("DISSOLVED_STONE_BLOCK in mineable/pickaxe: {}", DISSOLVED_STONE_BLOCK.get().defaultBlockState().is(BlockTags.MINEABLE_WITH_PICKAXE));
+        LOGGER.info("ROCK_SUGAR_BLOCK in mineable/hoe: {}", ROCK_SUGAR_BLOCK.get().defaultBlockState().is(BlockTags.MINEABLE_WITH_PICKAXE));
+        LOGGER.info("REINFORCED_ROCK_SUGAR_BLOCK in mineable/hoe: {}", REINFORCED_ROCK_SUGAR_BLOCK.get().defaultBlockState().is(BlockTags.MINEABLE_WITH_PICKAXE));
+        LOGGER.info("REINFORCED_ROCK_SUGAR_BLOCK in needs_stone_tool: {}", REINFORCED_ROCK_SUGAR_BLOCK.get().defaultBlockState().is(BlockTags.NEEDS_STONE_TOOL));
         if (FIREFLY_BUSH != null)
         {
             LOGGER.info("FIREFLY_BUSH in mineable/shears: {}", FIREFLY_BUSH.get().defaultBlockState().is(MINEABLE_WITH_SHEARS));

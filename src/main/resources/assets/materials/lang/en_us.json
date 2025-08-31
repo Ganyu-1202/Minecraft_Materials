@@ -1,6 +1,7 @@
 {
     "creative_tab.materials.example_tab": "materials",
     "More_information": "Press and hold Alt key for more information",
+    "No_information": "[No additional information available. ]",
     "item.materials.physique_strengthening_beverage": "Physique Strengthening Beverage",
     "item.materials.physique_strengthening_beverage.tooltip": "A beverage that temporarily boosts your physical strength. \nHowever, are there any side effects?",
     "item.materials.example_item": "Example Item (try it out?)",
@@ -55,6 +56,8 @@
     "block.materials.reinforced_mud_bricks": "Reinforced Mud Bricks",
     "block.materials.dissolved_stone": "Dissolved Stone",
     "block.materials.dissolved_stone.tooltip": "The stones from karst landform have become extremely fragile due to long-term erosion by flowing water.",
+    "block.materials.rock_sugar": "Rock Sugar",
+    "block.materials.reinforced_rock_sugar": "Reinforced Rock Sugar",
     "block.materials.imitation_bedrock": "Imitation Bedrock",
     "block.materials.imitation_bedrock.tooltip": "There are always people who want to imitate bedrock because of its hardness.\n\"Wait, the explosion resistance of this imitation bedrock is too weak...\"\n\"Explosion resistance is not within our consideration.\""
 }

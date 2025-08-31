@@ -118,6 +118,10 @@ public class ModLootTableProvider extends LootTableProvider
             this.dropSelf(EnrollBlocks.COMPRESSED_PACKED_MUD_BLOCK.get());
             this.dropSelf(EnrollBlocks.REINFORCED_MUD_BRICKS_BLOCK.get());
 
+            // 糖块
+            this.dropSelf(EnrollBlocks.ROCK_SUGAR_BLOCK.get());
+            this.dropSelf(EnrollBlocks.REINFORCED_ROCK_SUGAR_BLOCK.get());
+
             // 特殊方块
             this.dropSelf(EnrollBlocks.DISSOLVED_STONE_BLOCK.get());
             this.dropSelf(EnrollBlocks.IMITATION_BEDROCK_BLOCK.get());

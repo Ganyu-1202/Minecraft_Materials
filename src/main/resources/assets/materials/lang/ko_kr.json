@@ -1,6 +1,7 @@
 {
     "creative_tab.materials.example_tab": "머티리얼즈",
     "More_information": "Alt 키를 누르고 있으면 자세한 정보를 볼 수 있습니다.",
+    "No_information": "[추가 정보가 없습니다. ]",
     "item.materials.physique_strengthening_beverage": "체력 강화 음료",
     "item.materials.physique_strengthening_beverage.tooltip": "일시적으로 체력을 강화하는 음료. \n하지만 부작용이 있을까?",
     "item.materials.example_item": "예시 아이템 (시도해 보세요?)",
@@ -55,6 +56,8 @@
     "block.materials.reinforced_mud_bricks": "강화된 진흙 벽돌",
     "block.materials.dissolved_stone": "돌을 녹입니다",
     "block.materials.dissolved_stone.tooltip": "카르스트 지형의 돌이 오랜 시간 동안 물의 침식을 받아 매우 연약해졌다.",
+    "block.materials.rock_sugar": "각설탕",
+    "block.materials.reinforced_rock_sugar": "강화된 각설탕",
     "block.materials.imitation_bedrock": "모조 바닥암",
     "block.materials.imitation_bedrock.tooltip": "어떤 사람들은 기암의 경도 때문에 그것을 모방하고 싶어한다.\n\"잠깐, 이 모조 암벽의 폭발 저항력이 너무 약하지…\"\n폭발 저항성은 우리의 고려 범위에 포함되지 않습니다."
 }

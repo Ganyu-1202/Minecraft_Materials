@@ -83,7 +83,7 @@ public class Materials
             return;
 
         // 仅当方块被标记到自定义标签时介入
-        Tier required = null;
+        Tier required;
         if (state.is(NEEDS_NETHERITE_TOOL))
         {
             required = Tiers.NETHERITE;
@@ -150,6 +150,7 @@ public class Materials
                 ItemBlockRenderTypes.setRenderLayer(EnrollBlocks.BORDERLESS_GLASS_BLOCK.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(EnrollBlocks.HIGH_STRENGTH_GLASS_BLOCK.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(EnrollBlocks.SIX_PHASE_ICE_BLOCK.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(EnrollBlocks.ROCK_SUGAR_BLOCK.get(), RenderType.translucent());
                 // 条件性设置萤火虫灌木渲染层
                 if (EnrollBlocks.FIREFLY_BUSH != null)
                 {

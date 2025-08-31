@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-31T12:30:20.4370289	Loot Tables
+// 1.21.1	2025-08-31T16:31:44.9789774	Loot Tables
 f8b07ec4c53ecc4d5470e55294c88163fdc2deab data/materials/loot_table/blocks/borderless_glass.json
 3041f705aa948af7bfdbf757ef57a2ad13277eeb data/materials/loot_table/blocks/compressed_packed_mud.json
 e672a32a4b5da1071fe7621eea9a6dcef493fea6 data/materials/loot_table/blocks/dissolved_stone.json
@@ -38,11 +38,13 @@ d440a5e06232c00c153f74323d4fde9422408a03 data/materials/loot_table/blocks/reinfo
 76fdb7c6b3f9688a4a9dfb74e978975008088b14 data/materials/loot_table/blocks/reinforced_red_bricks.json
 03860319e0671523cd53baa06eed6097d283fe69 data/materials/loot_table/blocks/reinforced_red_nether_bricks.json
 9a11ef505fabc2868d0395e4c2c675f4bc3ffbec data/materials/loot_table/blocks/reinforced_red_sandstone.json
+bb3fb56721b1a275ab68fd173d7c086fa09347f2 data/materials/loot_table/blocks/reinforced_rock_sugar.json
 01f1db15009f399ed3c880dec2c2bbd1dad72eb0 data/materials/loot_table/blocks/reinforced_sandstone.json
 b4447d26c1816b9e2fb2706a0bdd886e164544c4 data/materials/loot_table/blocks/reinforced_smooth_basalt.json
 cf7cd288a8ac6026455441f7d7ab69e00dcce7f4 data/materials/loot_table/blocks/reinforced_smooth_stone.json
 ace0a7ac71118d81146ccb1858e3c01c3d5f3a73 data/materials/loot_table/blocks/reinforced_stone_bricks.json
 2304c0bc945b16ea08d36d72e2c565bc8d857161 data/materials/loot_table/blocks/reinforced_tuff.json
+6f94f224fd0a796eebc7338d6356654bc34927cf data/materials/loot_table/blocks/rock_sugar.json
 5b068f2e106287badf071ff8b045c67fbf00af70 data/materials/loot_table/blocks/six_phase_ice.json
 d77829cc50472153be7a7ddcc722cacf2dd52ee2 data/materials/loot_table/blocks/synthetic_obsidian.json
 cad6a556e5991c01cd97839d650c81a03da68e6a data/materials/loot_table/blocks/synthetic_reinforced_deepslate.json

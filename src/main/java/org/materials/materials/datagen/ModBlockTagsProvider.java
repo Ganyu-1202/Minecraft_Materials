@@ -28,6 +28,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider
                     .add(EnrollBlocks.FIREFLY_BUSH.get());
         }
 
+        // 锄开采
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(EnrollBlocks.ROCK_SUGAR_BLOCK.get())
+                .add(EnrollBlocks.REINFORCED_ROCK_SUGAR_BLOCK.get());
+
         // 斧头开采
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(EnrollBlocks.EXP_BLOCK.get())
@@ -87,7 +92,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider
                 .add(EnrollBlocks.FRAGILE_DEEPSLATE_BLOCK.get())
                 .add(EnrollBlocks.REINFORCED_SANDSTONE_BLOCK.get())
                 .add(EnrollBlocks.REINFORCED_RED_SANDSTONE_BLOCK.get())
-                .add(EnrollBlocks.COMPRESSED_PACKED_MUD_BLOCK.get());
+                .add(EnrollBlocks.COMPRESSED_PACKED_MUD_BLOCK.get())
+                .add(EnrollBlocks.REINFORCED_ROCK_SUGAR_BLOCK.get());
 
         // 需要金质工具
         tag(Materials.NEEDS_GOLDEN_TOOL)

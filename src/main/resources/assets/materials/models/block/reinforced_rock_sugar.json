@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "materials:block/reinforced_rock_sugar"
+    }
+}
