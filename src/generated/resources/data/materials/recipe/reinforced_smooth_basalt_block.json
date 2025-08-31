@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:smooth_basalt"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BNB",
+    "BBB"
+  ],
+  "result": {
+    "count": 2,
+    "id": "materials:reinforced_smooth_basalt"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 2.0,
+  "ingredient": {
+    "item": "minecraft:glass"
+  },
+  "result": {
+    "count": 1,
+    "id": "materials:borderless_glass"
+  }
+}

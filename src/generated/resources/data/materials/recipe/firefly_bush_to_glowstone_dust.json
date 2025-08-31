@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "materials:firefly_bush"
+    },
+    {
+      "item": "materials:firefly_bush"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:glowstone_dust"
+  }
+}

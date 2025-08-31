@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "W",
+    "W",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "materials:borderless_glass"
+  }
+}

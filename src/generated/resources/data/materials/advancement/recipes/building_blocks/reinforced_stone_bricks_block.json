@@ -1,0 +1,197 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:black_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_blue_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blue_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_brown_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brown_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cyan_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cyan_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gray_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gray_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_green_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:green_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_light_blue_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_blue_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_light_gray_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_gray_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lime_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:lime_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_magenta_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:magenta_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_orange_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:orange_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pink_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pink_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purple_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:purple_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_red_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:red_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "materials:reinforced_stone_bricks_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_yellow_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:yellow_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_concrete",
+      "has_orange_concrete",
+      "has_magenta_concrete",
+      "has_light_blue_concrete",
+      "has_yellow_concrete",
+      "has_lime_concrete",
+      "has_pink_concrete",
+      "has_gray_concrete",
+      "has_light_gray_concrete",
+      "has_cyan_concrete",
+      "has_purple_concrete",
+      "has_blue_concrete",
+      "has_brown_concrete",
+      "has_green_concrete",
+      "has_red_concrete",
+      "has_black_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "materials:reinforced_stone_bricks_block"
+    ]
+  }
+}

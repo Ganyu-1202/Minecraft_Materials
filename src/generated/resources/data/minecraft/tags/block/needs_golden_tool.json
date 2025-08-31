@@ -1,0 +1,17 @@
+{
+  "values": [
+    "materials:borderless_glass",
+    "materials:reinforced_tuff",
+    "materials:reinforced_netherrack",
+    "materials:reinforced_basalt",
+    "materials:reinforced_blackstone",
+    "materials:reinforced_polished_blackstone_bricks",
+    "materials:reinforced_granite",
+    "materials:reinforced_diorite",
+    "materials:reinforced_andesite",
+    "materials:reinforced_calcite",
+    "materials:reinforced_prismarine",
+    "materials:reinforced_prismarine_bricks",
+    "materials:reinforced_dark_prismarine"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "N": {
+      "item": "minecraft:nether_bricks"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NGN",
+    "NNN"
+  ],
+  "result": {
+    "count": 2,
+    "id": "materials:reinforced_nether_bricks"
+  }
+}

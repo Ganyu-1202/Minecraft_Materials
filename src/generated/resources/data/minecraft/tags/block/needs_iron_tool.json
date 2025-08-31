@@ -1,0 +1,19 @@
+{
+  "values": [
+    "materials:reinforced_plank",
+    "materials:reinforced_smooth_stone",
+    "materials:reinforced_nether_bricks",
+    "materials:reinforced_chiseled_nether_bricks",
+    "materials:reinforced_red_nether_bricks",
+    "materials:reinforced_smooth_basalt",
+    "materials:reinforced_red_bricks",
+    "materials:reinforced_quartz_block",
+    "materials:reinforced_chiseled_quartz",
+    "materials:reinforced_quartz_bricks",
+    "materials:reinforced_quartz_pillar",
+    "materials:reinforced_amethyst_block",
+    "materials:reinforced_purpur_block",
+    "materials:reinforced_purpur_pillar",
+    "materials:reinforced_mud_bricks"
+  ]
+}

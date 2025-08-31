@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:packed_mud"
+    },
+    {
+      "item": "minecraft:packed_mud"
+    },
+    {
+      "item": "minecraft:packed_mud"
+    },
+    {
+      "item": "minecraft:packed_mud"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "materials:compressed_packed_mud"
+  }
+}

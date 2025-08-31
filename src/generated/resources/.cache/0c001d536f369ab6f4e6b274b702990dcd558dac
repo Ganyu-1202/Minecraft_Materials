@@ -1,0 +1,11 @@
+// 1.21.1	2025-08-31T12:30:20.4360286	Tags for minecraft:block mod id materials
+5fb2b220981b47f81563d4a756c867c59c465352 data/minecraft/tags/block/mineable/axe.json
+88e16916a8b6d54fbe8993775bc96e011eed3650 data/minecraft/tags/block/mineable/pickaxe.json
+a0b40da70487cd437c8a183a18396d92725b2790 data/minecraft/tags/block/mineable/shears.json
+bf8a28787adf96ad7d1d7000b92745d1ec4d2474 data/minecraft/tags/block/mineable/shovel.json
+cfeb8611e3a3cb66b6ae22184bc9d63e207f3bcc data/minecraft/tags/block/needs_diamond_tool.json
+aa053c747371741b30ddef054e2ec3b2539f645f data/minecraft/tags/block/needs_golden_tool.json
+8dd0047c46f54030a9b8c46a10d295c2b66a11a5 data/minecraft/tags/block/needs_iron_tool.json
+9524db83400a724067b8fa924fdd80699adaf350 data/minecraft/tags/block/needs_netherite_tool.json
+ee1462cb3804dfc78734772a754d0e72c27e67c8 data/minecraft/tags/block/needs_stone_tool.json
+f08c6900e5372b3dbd7190a132866e31eaf5e877 data/minecraft/tags/block/snow_layer_cannot_survive_on.json

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "materials:six_phase_ice",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,47 @@
+# The name of the mod loader type to load - for regular FML @Mod mods this should be "javafml"
+modLoader = "javafml"
+# A version range to match for said mod loader - for regular FML @Mod it will be the FML version
+loaderVersion = "${fml_version_range}"
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license = "${mod_license}"
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]]
+# The modid of the mod
+modId = "${mod_id}"
+# The version number of the mod
+version = "${mod_version}"
+# A display name for the mod
+displayName = "${mod_name}"
+# A text field displayed in the mod UI
+authors = "${mod_authors}"
+# The description text for the mod (multi line text is allowed)
+description = '''${mod_description}'''
+
+# The [[dependencies.modid]] block allows you to specify dependencies for your mod.
+# The dependencies are checked against the mods listed in the mods.toml files of all loaded mods.
+# NeoForge is implicitly loaded and doesn't need to be specified here.
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.${mod_id}]]
+# the modid of the dependency
+modId = "neoforge"
+# Does this dependency have to exist - if not, ordering below must be specified
+mandatory = true
+# The version range of the dependency
+versionRange = "${neoforge_version_range}"
+# An ordering relationship for the dependency - BEFORE or AFTER required if the dependency is not mandatory
+# BEFORE - This mod is loaded BEFORE the dependency
+# AFTER - This mod is loaded AFTER the dependency
+ordering = "NONE"
+# Side this dependency is applied on - BOTH, CLIENT, or SERVER
+side = "BOTH"
+
+# Here's another dependency example:
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+mandatory = true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"

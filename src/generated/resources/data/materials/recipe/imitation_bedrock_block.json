@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "minecraft:netherite_block"
+    },
+    "O": {
+      "item": "materials:synthetic_obsidian"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OIO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "materials:imitation_bedrock"
+  }
+}

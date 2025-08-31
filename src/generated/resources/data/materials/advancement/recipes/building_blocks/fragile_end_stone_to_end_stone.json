@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fragile_end_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "materials:fragile_end_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "materials:fragile_end_stone_to_end_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fragile_end_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "materials:fragile_end_stone_to_end_stone"
+    ]
+  }
+}

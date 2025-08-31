@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "minecraft:mud_bricks"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "CIC",
+    "MMM"
+  ],
+  "result": {
+    "count": 2,
+    "id": "materials:reinforced_mud_bricks"
+  }
+}

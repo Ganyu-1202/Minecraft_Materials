@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "minecraft:mud"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "CIC",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "materials:compressed_packed_mud"
+  }
+}

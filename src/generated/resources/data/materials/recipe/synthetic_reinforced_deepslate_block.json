@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "minecraft:deepslate"
+    },
+    "I": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "DID",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "materials:synthetic_reinforced_deepslate"
+  }
+}
