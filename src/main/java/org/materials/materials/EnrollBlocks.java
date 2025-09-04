@@ -2,8 +2,6 @@ package org.materials.materials;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import javax.annotation.Nonnull;
-
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -684,11 +682,13 @@ public class EnrollBlocks
     static void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("FMLCommonSetupEvent event: {}", event.toString());
 
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
         LOGGER.info("{}{}", Config.magicNumberIntroduction, Config.magicNumber);
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
 
         // 运行时可改为如下检查：
         LOGGER.info("EXP_BLOCK in mineable/axe: {}", EXP_BLOCK.get().defaultBlockState().is(BlockTags.MINEABLE_WITH_AXE));
@@ -754,11 +754,8 @@ public class EnrollBlocks
             int patch = Integer.parseInt(versionParts[2]);
 
             // 1.21.5 及以后版本返回 false
-            if (major > 1 || (major == 1 && minor > 21) ||
-                    (major == 1 && minor == 21 && patch >= 5))
-            {
-                return false;
-            }
+            return major <= 1 && (major != 1 || minor <= 21) &&
+                    (major != 1 || minor != 21 || patch < 5);
         }
         return true;
     }

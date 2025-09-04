@@ -56,6 +56,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_nether_wart", has(Items.NETHER_WART))  // 用下界疣解锁
                 .save(output, Materials.MODID + ":physique_strengthening_beverage_recipe");
 
+        // 合成配方 - 强制镇静药水 (任意药水*1 + 蜘蛛眼*4 + 糖*4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EnrollItems.FORCED_SEDATION_POTION.get(), 1)
+                .requires(Items.SPIDER_EYE, 4)
+                .requires(Items.SUGAR, 4)
+                .requires(Items.POTION, 1)  // 额外需要药水作为容器
+                .unlockedBy("has_spider_eye", has(Items.SPIDER_EYE))  // 用蜘蛛眼解锁
+                .save(output, Materials.MODID + ":forced_sedative_potion_recipe");
+
         // 有序合成配方 - 脆弱木板 (用普通木板制作)
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EnrollBlocks.FRAGILE_PLANK_BLOCK_ITEM.get(), 4)
                 .pattern("W ")

@@ -2,6 +2,8 @@ package org.materials.materials;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,6 +19,7 @@ import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -78,6 +81,35 @@ public class EnrollItems
                 }
             });
 
+    // 注册名为 强制镇静药水 的物品
+    public static final DeferredItem<Item> FORCED_SEDATION_POTION = ITEMS.register("forced_sedation_potion", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .food(new FoodProperties.Builder()
+                            .nutrition(1)  // 提供0饥饿值 (0个营养点)
+                            .saturationModifier(0.5f)  // 饱和度修正值 (1.21.1中方法名变更)
+                            .alwaysEdible()  // 即使饱食时也能使用 (1.21.1中方法名变更)
+                            .build())
+            )
+            {
+                @Override
+                public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level,
+                                                                       @NotNull Player player,
+                                                                       @NotNull InteractionHand hand)
+                {
+                    ItemStack stack = player.getItemInHand(hand);
+                    if (!level.isClientSide)
+                    {
+                        CalmingSplashPotionEntity entity = new CalmingSplashPotionEntity(level, player);
+                        entity.setItem(stack);
+                        entity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+                        level.addFreshEntity(entity);
+                        stack.shrink(1);
+                    }
+                    return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
+                }
+            });
+
     // 处理酿造台配方事件类
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.GAME)
     public static class BrewingRecipeHandler
@@ -85,7 +117,7 @@ public class EnrollItems
         @SubscribeEvent
         public static void onRegisterBrewingRecipes(RegisterBrewingRecipesEvent event)
         {
-            Materials.LOGGER.info("Registering brewing recipes...");
+            LOGGER.info("Registering brewing recipes...");
 
             // 体质强化饮料酿造配方
             // 迅捷药水 + 青金石 = 体质强化饮料
@@ -119,8 +151,40 @@ public class EnrollItems
                     return ItemStack.EMPTY;
                 }
             });
+            // 镇静药水 酿造配方
+            // 虚弱药水 + 蜘蛛眼 = 镇静药水
+            event.getBuilder().addRecipe(new net.neoforged.neoforge.common.brewing.IBrewingRecipe()
+            {
+                @Override
+                public boolean isInput(@Nonnull ItemStack input)
+                {
+                    // 检查是否为虚弱药水
+                    if (!input.is(Items.POTION))
+                        return false;
+                    PotionContents contents = input.get(net.minecraft.core.component.DataComponents.POTION_CONTENTS);
+                    return contents != null && contents.potion().isPresent() &&
+                            contents.potion().get().equals(Potions.WEAKNESS);
+                }
 
-            Materials.LOGGER.info("Brewing recipe registered successfully!");
+                @Override
+                public boolean isIngredient(@Nonnull ItemStack ingredient)
+                {
+                    // 检查是否为蜘蛛眼
+                    return ingredient.is(Items.SPIDER_EYE);
+                }
+
+                @Override
+                public @Nonnull ItemStack getOutput(@Nonnull ItemStack input, @Nonnull ItemStack ingredient)
+                {
+                    if (isInput(input) && isIngredient(ingredient))
+                    {
+                        return FORCED_SEDATION_POTION.get().getDefaultInstance();
+                    }
+                    return ItemStack.EMPTY;
+                }
+            });
+
+            LOGGER.info("Brewing recipe registered successfully!");
         }
     }
 
@@ -131,6 +195,7 @@ public class EnrollItems
                     .displayItems((parameters, output) ->
                     {
                         output.accept(PHYSIQUE_STRENGTHENING_BEVERAGE_ITEM.get());
+                        output.accept(FORCED_SEDATION_POTION.get());
                         output.accept(EnrollBlocks.EXP_BLOCK_ITEM.get());
                         output.accept(EnrollBlocks.FRAGILE_PLANK_BLOCK_ITEM.get());
                         output.accept(EnrollBlocks.REINFORCED_PLANK_BLOCK_ITEM.get());

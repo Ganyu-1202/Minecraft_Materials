@@ -4,6 +4,7 @@
     "No_information": "[没有可用的附加信息。]",
     "item.materials.physique_strengthening_beverage": "体质强化饮料",
     "item.materials.physique_strengthening_beverage.tooltip": "一种可以暂时增强体质的饮料。\n不过，会有副作用吗？",
+    "item.materials.forced_sedation_potion": "强制镇静药水",
     "item.materials.example_item": "示例物品（尝尝看？）",
     "block.materials.exp": "EXP",
     "block.materials.firefly_bush": "萤火虫灌木丛",

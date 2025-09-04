@@ -35,3 +35,5 @@ out/
 # 忽略 run、run-data 目录
 /run/
 /run-data/
+/gradlew
+/gradlew.bat

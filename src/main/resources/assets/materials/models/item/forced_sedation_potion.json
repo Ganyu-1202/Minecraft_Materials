@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "materials:item/forced_sedation_potion"
+    }
+}

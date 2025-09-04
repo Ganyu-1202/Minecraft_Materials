@@ -4,6 +4,7 @@
     "No_information": "[追加情報はありません。]",
     "item.materials.physique_strengthening_beverage": "体力強化飲料",
     "item.materials.physique_strengthening_beverage.tooltip": "一時的に体力を強化する飲み物。\nただし、副作用はあるのだろうか？",
+    "item.materials.forced_sedation_potion": "強制鎮静ポーション",
     "item.materials.example_item": "サンプルアイテム（試してみますか？）",
     "block.materials.exp": "EXP",
     "block.materials.firefly_bush": "ホタルの生る灌木",

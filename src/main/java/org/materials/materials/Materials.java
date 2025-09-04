@@ -63,7 +63,7 @@ public class Materials
         LOGGER.info("HELLO from server starting");
 
         // 验证方块注册
-        ResourceLocation testBlock = ResourceLocation.fromNamespaceAndPath(MODID, "exp");
+        ResourceLocation testBlock = ResourceLocation.fromNamespaceAndPath(MODID, "reinforced_smooth_stone");
         if (BuiltInRegistries.BLOCK.containsKey(testBlock))
         {
             LOGGER.info("Server test PASSED: Blocks registered successfully");
