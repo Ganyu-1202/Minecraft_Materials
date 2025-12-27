@@ -83,13 +83,14 @@ public class EnrollItems
 
     // 注册名为 强制镇静药水 的物品
     public static final DeferredItem<Item> FORCED_SEDATION_POTION = ITEMS.register("forced_sedation_potion", () ->
-            new Item(new Item.Properties()
+            new TipsItem(new Item.Properties()
                     .stacksTo(16)
                     .food(new FoodProperties.Builder()
                             .nutrition(1)  // 提供0饥饿值 (0个营养点)
                             .saturationModifier(0.5f)  // 饱和度修正值 (1.21.1中方法名变更)
                             .alwaysEdible()  // 即使饱食时也能使用 (1.21.1中方法名变更)
-                            .build())
+                            .build()),
+                    "item.materials.forced_sedation_potion.tooltip"
             )
             {
                 @Override

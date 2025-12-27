@@ -5,6 +5,7 @@
     "item.materials.physique_strengthening_beverage": "體質強化飲料",
     "item.materials.physique_strengthening_beverage.tooltip": "一種可以暫時增強體質的飲料。\n不過，會有副作用嗎？",
     "item.materials.forced_sedation_potion": "強制鎮靜藥水",
+    "item.materials.forced_sedation_potion.tooltip": "效果：\n失明 (00:30)\n反胃 (00:08)\n虛弱 (01:04)\n緩慢 V (02:30)\n挖掘疲勞 VI (02:30)",
     "item.materials.example_item": "範例物品（試試看？）",
     "block.materials.exp": "EXP",
     "block.materials.firefly_bush": "螢火蟲灌木叢",

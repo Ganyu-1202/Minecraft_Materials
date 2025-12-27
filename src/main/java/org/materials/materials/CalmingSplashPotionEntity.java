@@ -32,7 +32,7 @@ public class CalmingSplashPotionEntity extends ThrownPotion
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 1280, 0, false, true, true)); // 64秒虚弱
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3000, 4, false, true, true)); // 2.5分钟缓慢V
             entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 3000, 5, false, true, true)); // 2.5分钟挖掘疲劳VI
-            entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 80, 0, false, true, true)); // 4秒失明
+            entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 600, 0, false, true, true)); // 30秒失明
         }
     }
 }

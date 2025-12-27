@@ -5,6 +5,7 @@
     "item.materials.physique_strengthening_beverage": "体力強化飲料",
     "item.materials.physique_strengthening_beverage.tooltip": "一時的に体力を強化する飲み物。\nただし、副作用はあるのだろうか？",
     "item.materials.forced_sedation_potion": "強制鎮静ポーション",
+    "item.materials.forced_sedation_potion.tooltip": "効果:\n暗視 (00:30)\n吐き気 (00:08)\n弱体化 (01:04)\n鈍化 V (02:30)\n採掘疲労 VI (02:30)",
     "item.materials.example_item": "サンプルアイテム（試してみますか？）",
     "block.materials.exp": "EXP",
     "block.materials.firefly_bush": "ホタルの生る灌木",

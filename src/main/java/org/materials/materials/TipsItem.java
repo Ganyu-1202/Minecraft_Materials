@@ -34,7 +34,11 @@ public class TipsItem extends Item
         {
             if (Screen.hasAltDown())
             {
-                tooltip.add(Component.translatable(this.toolTipInfo).withStyle(ChatFormatting.GRAY));
+                String raw = Component.translatable(this.toolTipInfo).getString();
+                for (String line : raw.split("\n"))
+                {
+                    tooltip.add(Component.literal(line).withStyle(ChatFormatting.GRAY));
+                }
             }
             else
             {

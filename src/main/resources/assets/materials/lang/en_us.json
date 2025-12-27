@@ -5,6 +5,7 @@
     "item.materials.physique_strengthening_beverage": "Physique Strengthening Beverage",
     "item.materials.physique_strengthening_beverage.tooltip": "A beverage that temporarily boosts your physical strength. \nHowever, are there any side effects?",
     "item.materials.forced_sedation_potion": "Forced sedation potion",
+    "item.materials.forced_sedation_potion.tooltip": "Effects:\nBlindness (00:30)\nNausea (00:08)\nWeakness (01:04)\nSlowness V (02:30)\nMining Fatigue VI (02:30)",
     "item.materials.example_item": "Example Item (try it out?)",
     "block.materials.exp": "EXP",
     "block.materials.firefly_bush": "Firefly Bush",

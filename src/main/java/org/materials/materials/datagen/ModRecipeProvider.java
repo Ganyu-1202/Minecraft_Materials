@@ -41,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         if (fireflyBush != null)
         {
             // 无序合成配方 - 荧石粉 (用萤火虫灌木丛制作)
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.GLOWSTONE_DUST, 4)
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GLOWSTONE_DUST, 4)
                     .requires(fireflyBush, 2)
                     .unlockedBy(getHasName(fireflyBush), has(fireflyBush))
                     .save(output, ResourceLocation.fromNamespaceAndPath(Materials.MODID, "firefly_bush_to_glowstone_dust"));
